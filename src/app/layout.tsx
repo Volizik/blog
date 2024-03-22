@@ -1,5 +1,5 @@
 import Footer from "@/app/_components/footer";
-import { CMS_NAME, HOME_OG_IMAGE_URL } from "@/lib/constants";
+import { HOME_OG_IMAGE_URL } from "@/lib/constants";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 
@@ -8,8 +8,9 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: `Next.js Blog Example with ${CMS_NAME}`,
-  description: `A statically generated blog example using Next.js and ${CMS_NAME}.`,
+  title: `Blog by Kizilov.`,
+  description: `Программирование - это просто.`,
+  metadataBase: new URL('https://google.com'),
   openGraph: {
     images: [HOME_OG_IMAGE_URL],
   },
@@ -53,7 +54,7 @@ export default function RootLayout({
           content="/favicon/browserconfig.xml"
         />
         <meta name="theme-color" content="#000" />
-        <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
+        {/*<link rel="alternate" type="application/rss+xml" href="/feed.xml" />*/}
       </head>
       <body className={inter.className}>
         <div className="min-h-screen">{children}</div>
