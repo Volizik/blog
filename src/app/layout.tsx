@@ -1,7 +1,9 @@
-import Footer from "@/app/_components/footer";
-import { HOME_OG_IMAGE_URL } from "@/lib/constants";
+import React from "react";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+
+import { Footer } from "@/app/_components/Footer";
+import { HOME_OG_IMAGE_URL } from "@/lib/constants";
 
 import "./globals.css";
 
@@ -9,7 +11,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: `Blog by Kizilov.`,
-  description: `Программирование - это просто.`,
+  description: `Программирование - это просто!`,
   metadataBase: new URL('https://google.com'),
   openGraph: {
     images: [HOME_OG_IMAGE_URL],

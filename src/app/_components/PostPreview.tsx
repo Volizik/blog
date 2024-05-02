@@ -1,8 +1,9 @@
-import { type Author } from "@/interfaces/author";
 import Link from "next/link";
-import Avatar from "./avatar";
-import CoverImage from "./cover-image";
-import DateFormatter from "./date-formatter";
+
+import { type Author } from "@/interfaces/author";
+import { Avatar } from "./Avatar";
+import { CoverImage} from "./CoverImage";
+import { DateFormatter } from "./DateFormatter";
 
 type Props = {
   title: string;
@@ -39,7 +40,6 @@ export function PostPreview({
         <DateFormatter dateString={date} />
       </div>
       <p className="text-lg leading-relaxed mb-4">{excerpt}</p>
-      <Avatar name={author.name} picture={author.picture} />
     </div>
   );
 }

@@ -1,8 +1,7 @@
-import Container from "@/app/_components/container";
-import {QuoteWidget} from "@/app/_components/QuoteWidget";
+import { Container } from "@/app/_components/Container";
+import { QuoteWidget } from "@/app/_components/QuoteWidget";
 
 export function Footer() {
-
   return (
     <footer className="bg-neutral-50 border-t border-neutral-200">
       <Container>
@@ -11,5 +10,3 @@ export function Footer() {
     </footer>
   );
 }
-
-export default Footer;

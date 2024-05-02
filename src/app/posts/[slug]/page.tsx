@@ -1,10 +1,11 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
+
 import { getAllPosts, getPostBySlug } from "@/lib/api";
-import Container from "@/app/_components/container";
-import Header from "@/app/_components/header";
-import { PostBody } from "@/app/_components/post-body";
-import { PostHeader } from "@/app/_components/post-header";
+import { Container } from "@/app/_components/Container";
+import { Header } from "@/app/_components/Header";
+import { PostBody } from "@/app/_components/PostBody";
+import { PostHeader } from "@/app/_components/PostHeader";
 
 export default async function Post({ params }: Params) {
   const post = getPostBySlug(params.slug);
